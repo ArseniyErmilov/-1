@@ -1,7 +1,10 @@
-from steganocryptopy.steganography import Steganography
+import random
 
-Steganography.generate_key("")
-secret = Steganography.encrypt("key.key","img.png", "secret.txt")
-secret.save("secret4.png")
-result = Steganography.decrypt("key.key", "secret4.png")
-print(result)
+random_number = random.randint(0, 100)
+
+num = int(input('введите число от 0 до 100:'))
+if random_number > num:
+    print('число больше')
+elif random_number < num:
+    print('число меньше')
+else:print("вы угадали число")
